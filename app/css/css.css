@@ -1,0 +1,108 @@
+body.bg-gray {
+    background-color: #f7fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .flex-container {
+        flex-direction: row;
+    }
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ingrediente-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button-cocinar {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ee1010;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button-cocinar:hover {
+    background-color: #a21818;
+}
+
+.mensaje-error {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.flex-container>.ingredientes-seleccionados {
+    width: 100%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .flex-container>.ingredientes-seleccionados {
+        width: 50%;
+    }
+}
+
+.flex-container>.imagen-receta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .flex-container>.imagen-receta {
+        width: 50%;
+    }
+}
+
+.imagen-receta img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mensaje-exito {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mensaje-exito p {
+    font-size: 20px;
+    color: #48bb78;
+    font-weight: bold;
+}

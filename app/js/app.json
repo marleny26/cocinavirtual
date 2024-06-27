@@ -1,0 +1,85 @@
+{
+    "ingredientes": [
+      "Arroz",
+      "Pollo",
+      "Tomate",
+      "Cebolla",
+      "Ajo",
+      "Pimiento",
+      "Aceite",
+      "Sal",
+      "Pimienta",
+      "Caldo de Pollo",
+      "Pescado blanco",
+      "Jugo de limón",
+      "Cilantro",
+      "Ají",
+      "Camote",
+      "Maíz",
+      "Lechuga"
+    ],
+    "recetas": [
+      {
+        "titulo": "Arroz con Pollo",
+        "ingredientes": [
+          "Arroz",
+          "Pollo",
+          "Tomate",
+          "Cebolla",
+          "Ajo",
+          "Pimiento",
+          "Aceite",
+          "Sal",
+          "Pimienta"
+        ],
+        "imagen": "app/img/Arroz-con-pollo.jpg"
+      },
+      {
+        "titulo": "Pollo al Horno",
+        "ingredientes": [
+          "Pollo",
+          "Tomate",
+          "Cebolla",
+          "Ajo",
+          "Aceite",
+          "Sal",
+          "Pimienta"
+        ],
+        "imagen": "app/img/Pollo al Horno.jpg"
+      },
+      {
+        "titulo": "Ensalada de Tomate",
+        "ingredientes": ["Tomate", "Cebolla", "Aceite", "Sal", "Pimienta"],
+        "imagen": "app/img/EnsaladadeTomate.jpg"
+      },
+      {
+        "titulo": "Sopa de Pollo",
+        "ingredientes": [
+          "Pollo",
+          "Cebolla",
+          "Ajo",
+          "Caldo de Pollo",
+          "Sal",
+          "Pimienta"
+        ],
+        "imagen": "app/img/SopaDePollo.jpg"
+      },
+      {
+        "titulo": "Ceviche",
+        "ingredientes": [
+          "Pescado blanco",
+          "Jugo de limón",
+          "Cebolla",
+          "Cilantro",
+          "Ají",
+          "Sal",
+          "Pimienta",
+          "Camote",
+          "Maíz",
+          "Lechuga",
+          "Tomate"
+        ],
+        "imagen": "app/img/ceviche.jpg"
+      }
+    ]
+  }

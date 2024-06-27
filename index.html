@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Kitchen</title>
-    <link rel="stylesheet" href="css.css">   
-    
+    <title>Cocina</title>
+    <link rel="stylesheet" href="app/css/css.css">
 </head>
-<body>
+
+<body class="bg-gray">
     <div id="app" class="container">
-        <div class="ingredients-section">
-            <h2>Ingredientes</h2>
-            <div v-for="(ingredient, index) in ingredients" :key="index">
-                <input type="checkbox" :id="ingredient.name" v-model="selectedIngredients">
-                <label :for="ingredient.name">{{ ingredient.name }}</label>
+        <div class="flex-container">
+            <div class="card">
+                <h1>Ingredientes</h1>
+                <div v-for="(ingrediente, index) in ingredientes" :key="index" class="ingrediente-item">
+                    <input type="checkbox" :value="ingrediente" v-model="ingredientesSeleccionados">
+                    <span>{{ ingrediente }}</span>
+                </div>
+                <button @click="cocinar" class="button-cocinar">Cocinar</button>
             </div>
-            <button @click="cook">Cocinar</button>
-        </div>
-        <div class="recipe-section">
-            <div v-if="error" class="error">{{ error }}</div>
-            <img v-if="recipe" class="recipe-image" :src="recipe.image" alt="Recipe Image">
-            <div v-if="recipe">
-                <h3>{{ recipe.name }}</h3>
-                <p>{{ recipe.description }}</p>
+            <div class="card">
+                <div v-if="mensaje" class="mensaje-error">{{ mensaje }}</div>
+                <div v-if="ingredientesSeleccionados.length > 0" class="flex-container">
+                    <div class="ingredientes-seleccionados">
+                        <h2>Ingredientes seleccionados</h2>
+                        <ul>
+                            <li v-for="ingrediente in ingredientesSeleccionados">{{ ingrediente }}</li>
+                        </ul>
+                    </div>
+                    <div v-if="receta" class="imagen-receta">
+                        <img :src="receta.imagen" alt="Imagen del platillo">
+                    </div>
+                </div>
+                <div v-if="receta" class="mensaje-exito">
+                    <p>¡Felicidades! Has cocinado {{ receta.titulo }}.</p>
+                </div>
             </div>
         </div>
     </div>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app/js/myapp.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="vue.js"></script>
+
 </html>
