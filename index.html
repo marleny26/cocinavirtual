@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Kitchen</title>
+    <link rel="stylesheet" href="css.css">   
+    
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="ingredients-section">
+            <h2>Ingredientes</h2>
+            <div v-for="(ingredient, index) in ingredients" :key="index">
+                <input type="checkbox" :id="ingredient.name" v-model="selectedIngredients">
+                <label :for="ingredient.name">{{ ingredient.name }}</label>
+            </div>
+            <button @click="cook">Cocinar</button>
+        </div>
+        <div class="recipe-section">
+            <div v-if="error" class="error">{{ error }}</div>
+            <img v-if="recipe" class="recipe-image" :src="recipe.image" alt="Recipe Image">
+            <div v-if="recipe">
+                <h3>{{ recipe.name }}</h3>
+                <p>{{ recipe.description }}</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="vue.js"></script>
+</html>
